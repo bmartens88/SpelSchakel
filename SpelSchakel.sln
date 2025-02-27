@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19B1FB0E-A16C-4B8B-AAF7-85E40AF25ED4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C2F62F9F-1798-4766-83F1-1018AC57C71F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orchestration", "Orchestration", "{E4EE2AD6-052A-43E2-AA14-0A65D14AAE91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{306B24EF-3C0A-4106-B537-88378BFBEE59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{DDD0A4E1-0270-4614-B511-8275AF3363A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B0AA73BD-6EBC-44C4-A200-C5B15396F45A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpelSchakel.Common.Domain", "src\Common\SpelSchakel.Common.Domain\SpelSchakel.Common.Domain.csproj", "{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4EE2AD6-052A-43E2-AA14-0A65D14AAE91} = {19B1FB0E-A16C-4B8B-AAF7-85E40AF25ED4}
+		{306B24EF-3C0A-4106-B537-88378BFBEE59} = {19B1FB0E-A16C-4B8B-AAF7-85E40AF25ED4}
+		{DDD0A4E1-0270-4614-B511-8275AF3363A5} = {19B1FB0E-A16C-4B8B-AAF7-85E40AF25ED4}
+		{B0AA73BD-6EBC-44C4-A200-C5B15396F45A} = {19B1FB0E-A16C-4B8B-AAF7-85E40AF25ED4}
+		{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C} = {B0AA73BD-6EBC-44C4-A200-C5B15396F45A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCF112E-F2B9-44C7-8471-B4CED2CC2B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
