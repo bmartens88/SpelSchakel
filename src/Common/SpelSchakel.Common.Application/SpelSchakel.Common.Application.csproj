@@ -15,8 +15,4 @@
       <ProjectReference Include="..\SpelSchakel.Common.Domain\SpelSchakel.Common.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Behaviors\" />
-    </ItemGroup>
-
 </Project>
