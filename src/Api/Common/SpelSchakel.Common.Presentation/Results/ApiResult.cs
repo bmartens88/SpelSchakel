@@ -3,8 +3,17 @@ using SpelSchakel.Common.Domain.Monads;
 
 namespace SpelSchakel.Common.Presentation.Results;
 
+/// <summary>
+///     Class containing definition of method to create <see cref="IResult" /> instances.
+/// </summary>
 public static class ApiResult
 {
+    /// <summary>
+    ///     Generates a problem details object from the provided <see cref="Result" /> object.
+    /// </summary>
+    /// <param name="result">The result of the operation.</param>
+    /// <returns><see cref="IResult" /> with problem details object.</returns>
+    /// <exception cref="InvalidOperationException">Thrown when the result of the operation was successful.</exception>
     public static IResult Problem(Result result)
     {
         if (result.IsSuccess)
@@ -17,6 +26,7 @@ public static class ApiResult
             statusCode: GetStatusCode(result.Error.ErrorType),
             extensions: GetErrors(result));
 
+        // Get a title based on the error.
         static string GetTitle(Error error)
         {
             return error.ErrorType switch
@@ -29,6 +39,7 @@ public static class ApiResult
             };
         }
 
+        // Get a details string based on the error.
         static string GetDetail(Error error)
         {
             return error.ErrorType switch
@@ -41,6 +52,7 @@ public static class ApiResult
             };
         }
 
+        // Get a type based on the error type.
         static string GetType(ErrorType errorType)
         {
             return errorType switch
@@ -53,6 +65,7 @@ public static class ApiResult
             };
         }
 
+        // Get the status code based on the error type.
         static int GetStatusCode(ErrorType errorType)
         {
             return errorType switch
@@ -65,6 +78,7 @@ public static class ApiResult
             };
         }
 
+        // Any additional information which is added as an extension to the problem details object.
         static Dictionary<string, object?>? GetErrors(Result result)
         {
             if (result.Error is not ValidationError validationError) return null;
